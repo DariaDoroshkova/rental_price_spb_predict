@@ -18,45 +18,48 @@ The project is based on data from Yandex.Realty classified https://realty.yandex
 Below I will show some statistics about the dataset and list a few of the steps I took to prepare the data.
 
 Initial dataset consists from 171186 observations and 17 columns (features). Target feature is 'last_price'. Here is information abot the data.
-![alt text](Images/data_info.png)
+
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/data_info.PNG)
 
 The data set included both apartments for rent and for sale. Therefore, first, the data was filtered according to the necessary criteria: offer type - rent, location - St. Petersburg.
 
 Data preprocessing included filling missing values, cleaning outliers by IQR method, checking the most expensive and cheapest offers for realism.
 
 Let's look at the target variable after data preparation. 
-![alt text](Images/density_plot.png)
+
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/density_plot.PNG)
+
 Price has right-skewed distribution. There seems to be a lot of outliers since the price gets to 600,000 rubles for a month's rent.
 
 I build a boxplot in order to look at the distribution of a variable from the other side.
 
-![alt text](Images/price_boxplot.png)
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/price_boxplot.PNG)
 
 Evidently data outliers need to be cleaned up. For this purpose, I applied the IQR method.
 
 Next I plotted heatmap to analyze the correlation between variables.
-![alt text](Images/heatmap.png)
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/heatmap.PNG)
 
 As the map shows, the 'living_area' should be excluded from the data set, as it is highly correlated with the variable 'area'.
 
 Then I visualized the statistical dependencies of numerical variables with the target variable.
-![alt text](Images/replot.png)
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/replot.PNG)
 Thanks to this plot, we can not only infer the trend of the dependence of some variable and the target variable, but it is also a way of visualizing the data, which, for example, showed that some variables have outliers that are clearly errors, such as a kitchen area equal to 2500 sq m.
 
 This is how the data is distributed over time. 
-![alt text](Images/time.png)
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/time.PNG)
 
 #### Building and training predicting models
 - - -
 After preparation the dataset consists of 126611 observations and 13 columns.
 Here is sample of the data.
-![alt text](Images/data_sample.png)
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/data_sample.PNG)
 
 In the first model, I used most of the variables and built it with RandomForestRegressor.
 
 #### Features importance
 To include only relevant variables in the model, feature_importance function was applied
-![alt text](Images/f_importance.png)
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/f_importance.PNG)
 
 Features 'studio' and 'open plan' will not be used in further models, since there is no evidence of significance for the model.
 
