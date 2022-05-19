@@ -28,6 +28,7 @@ Data preprocessing included filling missing values, cleaning outliers by IQR met
 Let's look at the target variable after data preparation. 
 
 ![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/density_plot.PNG)
+
 Price has right-skewed distribution. There seems to be a lot of outliers since the price gets to 600,000 rubles for a month's rent.
 
 I build a boxplot in order to look at the distribution of a variable from the other side.
