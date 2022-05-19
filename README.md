@@ -40,7 +40,7 @@ Next I plotted heatmap to analyze the correlation between variables.
 As the map shows, the 'living_area' should be excluded from the data set, as it is highly correlated with the variable 'area'.
 
 Then I visualized the statistical dependencies of numerical variables with the target variable.
-![alt text](Images/replot.png)
+![alt text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/replot.PNG)
 Thanks to this plot, we can not only infer the trend of the dependence of some variable and the target variable, but it is also a way of visualizing the data, which, for example, showed that some variables have outliers that are clearly errors, such as a kitchen area equal to 2500 sq m.
 
 This is how the data is distributed over time. 
