@@ -18,7 +18,7 @@ The project is based on data from Yandex.Realty classified https://realty.yandex
 Below I will show some statistics about the dataset and list a few of the steps I took to prepare the data.
 
 Initial dataset consists from 171186 observations and 17 columns (features). Target feature is 'last_price'. Here is information abot the data.
-![alt text](Images/data_info.png)
+![alt text]([Images/data_info.png](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/data_info.PNG))
 
 The data set included both apartments for rent and for sale. Therefore, first, the data was filtered according to the necessary criteria: offer type - rent, location - St. Petersburg.
 
