@@ -177,13 +177,16 @@ The toute will look as follows:
 ```
 Specify a list of parameters and their values. Click send and receive the result - price of apartment.
 
+In Postman result of running the application will looks like this example 
+![alt_text](https://raw.githubusercontent.com/DariaDoroshkova/rental_price_spb_predict/main/Images/postman.jpg)
+
 ### How to run application using Docker
 - - -
 
 The Dockerfile is a text document containing all the commands to build the image.
 In my project Dockerfile contains the following commands:
 ```python
-from ubuntu:20.04 
+from ubuntu:latest 
 MAINTAINER Daria Doroshkova
 RUN apt-get update -y 
 COPY . /opt/pythonproject
@@ -195,8 +198,9 @@ CMD python3 ap.py
 
 To run application with Docker, first, pull project
 ```python
-docker pull dariadoroshkova/pythonproject:v.0.3
+docker pull dariadoroshkova/pythonproject:v.0.4
 ```
 ```python
-docker run --network host -d dariadoroshkova/pythonproject:v.0.3
+docker run --network host -d dariadoroshkova/pythonproject:v.0.4
 ```
+Additionally here is the link to Docker Hub https://hub.docker.com/repository/docker/dariadoroshkova/pythonproject
